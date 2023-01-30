@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PolyclinicController;
+use App\Models\Polyclinic;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.dashboard');
 });
+Route::resource('polyclinic', PolyclinicController::class);
 
 // Route::get('/', function () {
 //     return view('/welcome');
@@ -38,4 +41,3 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 });
-

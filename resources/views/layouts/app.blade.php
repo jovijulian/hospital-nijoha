@@ -43,7 +43,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 </head>
 
-<body class="{{ $class }}">
+<body>
 
     @guest
         @include('layouts.page_templates.guest')

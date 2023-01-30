@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Polyclinic;
 use App\Http\Requests\StorePolyclinicRequest;
 use App\Http\Requests\UpdatePolyclinicRequest;
+use Illuminate\Http\Request;
 
 class PolyclinicController extends Controller
 {
@@ -15,7 +16,8 @@ class PolyclinicController extends Controller
      */
     public function index()
     {
-        //
+        $polyclinics = Polyclinic::orderBy('id', 'desc')->get();
+        return view('polyclinic.index', compact('polyclinics'));
     }
 
     /**
@@ -25,7 +27,7 @@ class PolyclinicController extends Controller
      */
     public function create()
     {
-        //
+        return view('polyclinic.create');
     }
 
     /**
@@ -34,9 +36,15 @@ class PolyclinicController extends Controller
      * @param  \App\Http\Requests\StorePolyclinicRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePolyclinicRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            ]);
+            $polyclinic = new Polyclinic();
+            $polyclinic->name = $request->name;
+            $polyclinic->save();
+            return redirect()->route('polyclinic.index')->with('success', 'Polyclinic Saved!');
     }
 
     /**
@@ -45,9 +53,9 @@ class PolyclinicController extends Controller
      * @param  \App\Models\Polyclinic  $polyclinic
      * @return \Illuminate\Http\Response
      */
-    public function show(Polyclinic $polyclinic)
+    public function show($polyclinic)
     {
-        //
+        return view('polyclinic.show', compact('polyclinic'));
     }
 
     /**
@@ -56,9 +64,10 @@ class PolyclinicController extends Controller
      * @param  \App\Models\Polyclinic  $polyclinic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Polyclinic $polyclinic)
+    public function edit($id)
     {
-        //
+        $polyclinic = Polyclinic::find($id);
+        return view('polyclinic.edit', compact('polyclinic'));
     }
 
     /**
@@ -68,9 +77,15 @@ class PolyclinicController extends Controller
      * @param  \App\Models\Polyclinic  $polyclinic
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePolyclinicRequest $request, Polyclinic $polyclinic)
+    public function update(Request $request, $polyclinic)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            ]);
+            $polyclinic = Polyclinic::find($polyclinic);
+            $polyclinic->name = $request->name;
+            $polyclinic->save();
+            return redirect()->route('polyclinic.index')->with('success', 'Polyclinic updated!');
     }
 
     /**
@@ -79,8 +94,10 @@ class PolyclinicController extends Controller
      * @param  \App\Models\Polyclinic  $polyclinic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Polyclinic $polyclinic)
+    public function destroy($id)
     {
-        //
+        $polyclinic = Polyclinic::find($id);
+        $polyclinic->delete();
+        return redirect()->route('polyclinic.index')->with('success', 'Polyclinic deleted!');
     }
 }
