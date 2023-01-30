@@ -18,13 +18,13 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ route('polyclinic.index') }}">
                     <i class="nc-icon nc-diamond"></i>
                     <p>Polyclinics</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ route('doctor.index') }}">
                     <i class="nc-icon nc-diamond"></i>
                     <p>Doctors</p>
                 </a>
@@ -35,7 +35,6 @@
                     <p>Patients</p>
                 </a>
             </li>
-
         </ul>
     </div>
 </div>

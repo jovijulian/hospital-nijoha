@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PolyclinicController;
+use App\Http\Controllers\DoctorController;
 use App\Models\Polyclinic;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::get('/', function () {
     return view('pages.dashboard');
 });
 Route::resource('polyclinic', PolyclinicController::class);
+Route::resource('doctor', DoctorController::class);
 
 // Route::get('/', function () {
 //     return view('/welcome');

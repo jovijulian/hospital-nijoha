@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
@@ -24,7 +24,6 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Name</th>
                                     <th colspan="2">Action</th>
-                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,18 +40,18 @@
                                         @method('DELETE')
                                         <button class="btn btn-danger" type="submit">Delete</button>
                                     </form>
-                    
+
                                 </td>
                             </tr>
-                            @endforeach                                          
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
-      
+
     </div>
 </div>
 @endsection
