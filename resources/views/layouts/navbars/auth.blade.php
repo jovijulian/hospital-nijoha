@@ -12,9 +12,9 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li>
-                <a href="{{ route('page.index', 'dashboard') }}">
+                <a href="">
                     <i class="nc-icon nc-bank"></i>
-                    <p>{{ __('Dashboard') }}</p>
+                    <p>Dashboard</p>
                 </a>
             </li>
             <li>
@@ -35,7 +35,7 @@
                     <p>Patients</p>
                 </a>
             </li>
-            
+
         </ul>
     </div>
 </div>
