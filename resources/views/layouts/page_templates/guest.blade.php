@@ -1,7 +1,9 @@
-@include('layouts.navbars.navs.guest')
+<div class="wrapper">
 
-<div class="wrapper wrapper-full-page ">
-    <div class="full-page section-image" filter-color="black" data-image="{{ asset('paper') . '/' . ($backgroundImagePath ?? "img/bg/fabio-mangione.jpg") }}">
+    @include('layouts.navbars.auth')
+
+    <div class="main-panel">
+        @include('layouts.navbars.navs.guest')
         @yield('content')
         @include('layouts.footer')
     </div>
