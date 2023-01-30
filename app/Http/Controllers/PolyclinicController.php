@@ -53,8 +53,9 @@ class PolyclinicController extends Controller
      * @param  \App\Models\Polyclinic  $polyclinic
      * @return \Illuminate\Http\Response
      */
-    public function show($polyclinic)
+    public function show($id)
     {
+        $polyclinic = Polyclinic::find($id);
         return view('polyclinic.show', compact('polyclinic'));
     }
 

@@ -29,7 +29,7 @@
                                         <th scope="col">Registration Code</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Age</th>
-                                        <th scope="col">Docttor Name</th>
+                                        <th scope="col">Doctor Name</th>
                                         <th scope="col">Poly Name</th>
                                         <th  class="text-center">Action</th>
                                     </tr>

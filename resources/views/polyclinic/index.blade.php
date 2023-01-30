@@ -21,7 +21,7 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">No</th>
+                                    <th scope="col" class="text-center">No</th>
                                     <th scope="col">Name</th>
                                     <th colspan="2">Action</th>
                                 </tr>
@@ -29,7 +29,7 @@
                             <tbody>
                             @foreach ($polyclinics as $polyclinic)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td class="text-center">{{ $loop->iteration }}</td>
                                 <td> <a href="{{ route('polyclinic.show', $polyclinic->id) }}" title="Lihat Data Polyclinic">{{ $polyclinic->name }}</a></td>
                                 <td>
                                     <a href="{{ route('polyclinic.edit', $polyclinic->id) }}" class="btn btn-primary">Edit</a>

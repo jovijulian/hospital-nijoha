@@ -24,29 +24,28 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">No</th>
+                                        <th scope="col" class="text-center">No</th>
                                         <th scope="col">Registration Code</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Poly Name</th>
+                                        <th colspan="2">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($doctors as $doctor)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
                                             <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Dokter">{{ $doctor->registration_code }}</a></td>
                                             <td>{{ $doctor->name }}</td>
                                             <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Poli">{{ $doctor->polyclinic->name }}</a></td>
                                             <td>
-                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn btn-primary">Edit</a>
-                                            </td>
-                                            <td>
-                                                <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
+                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn btn-primary">Edit</a> <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger" type="submit">Delete</button>
                                                 </form>
                                             </td>
+
                                         </tr>
                                     @endforeach
                                 </tbody>
