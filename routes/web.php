@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PolyclinicController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
 use App\Models\Polyclinic;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,9 @@ Route::get('/', function () {
 });
 Route::resource('polyclinic', PolyclinicController::class);
 Route::resource('doctor', DoctorController::class);
+Route::resource('patient', PatientController::class);
+
+Route::post('api/doctor', [PatientController::class, 'fetchDoctor']);
 
 // Route::get('/', function () {
 //     return view('/welcome');

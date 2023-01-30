@@ -109,6 +109,7 @@ class DoctorController extends Controller
             'polyclinic_id' => 'required',
             ]);
             $doctor = Doctor::find($id);
+            $doctor->registration_code = $request->registration_code;
             $doctor->name = $request->name;
             $doctor->polyclinic_id = $request->polyclinic_id;
             $doctor->save();

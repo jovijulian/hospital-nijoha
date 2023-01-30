@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ route('patient.index') }}">
                     <i class="nc-icon nc-diamond"></i>
                     <p>Patients</p>
                 </a>

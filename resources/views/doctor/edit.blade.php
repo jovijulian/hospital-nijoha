@@ -17,6 +17,7 @@
 
                     <div class="card-body">
                         <form action="{{ route('doctor.update', $doctor->id) }}" method="POST">
+                            <input type="text" class="form-control" name="registration_code" value="{{ $doctor->registration_code }}" hidden>
                         @csrf
                         @method('PUT')
                             <div class="form-group mt-2">
