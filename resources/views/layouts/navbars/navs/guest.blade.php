@@ -8,8 +8,12 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#pablo">{{ __('Dashboard') }}</a>
+            @if ( str_replace('-', ' ', Request::path()) == "/")
+            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            @else
+            <a class="navbar-brand" href="#pablo">{{ str_replace('-', ' ', Request::path()) }}</a>
+            @endif
         </div>
-      
+
     </div>
 </nav>

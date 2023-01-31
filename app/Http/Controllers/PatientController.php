@@ -93,7 +93,8 @@ class PatientController extends Controller
      */
     public function show($id)
     {
-
+        $patient = Patient::find($id);
+        return view('patient.show', compact('patient'));
     }
 
     /**

@@ -15,9 +15,9 @@
                     </div>
 
                   <div class="card-body">
-                    <h5 class="mb-1">Id: {{ $polyclinic->id }}</h5>
-                    <h5 class="mb-1">Name: {{ $polyclinic->name }}</h5>
-                    <h5>Created: {{ date('d-m-Y H:i:s', strtotime($polyclinic->created_at)) }}</h5>
+                    <h6 class="mb-1 ml-2">Id: {{ $polyclinic->id }}</h6>
+                    <h6 class="mb-1 ml-2">Name: {{ $polyclinic->name }}</h6>
+                    <h6 class="ml-2">Created: {{ date('d-m-Y H:i:s', strtotime($polyclinic->created_at)) }}</h6>
 
                         <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%"">
                             <h5 class="text-center">Doctor</h5>
