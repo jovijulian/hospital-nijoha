@@ -15,37 +15,37 @@
                                     <h3 class="mb-0">Doctors</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a href="{{ route('doctor.create')}}" class="btn btn-sm btn-primary">Add Doctor</a>
+                                    <a href="{{ route('doctor.create')}}" class="btn btn-md" style="background: #E5E0FF; color: #000; border-radius: 15px;
+                                    ">Add Doctor</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="table-responsive">
-                            <table class="table align-items-center table-flush">
+                        <div class="mt-3">
+                            <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%">
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col" class="text-center">No</th>
                                         <th scope="col">Registration Code</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Poly Name</th>
-                                        <th colspan="2">Action</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($doctors as $doctor)
                                         <tr>
                                             <td class="text-center">{{ $loop->iteration }}</td>
-                                            <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Dokter">{{ $doctor->registration_code }}</a></td>
+                                            <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Doctor Detail" style="font-weight: bold; color: #7286D3">{{ $doctor->registration_code }}</a></td>
                                             <td>{{ $doctor->name }}</td>
-                                            <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Poli">{{ $doctor->polyclinic->name }}</a></td>
-                                            <td>
-                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn btn-primary">Edit</a> <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
+                                            <td> <a href="{{ route('polyclinic.show', $doctor->polyclinic->id) }}" title="Poly Detail" style="font-weight: bold; color: #7286D3">{{ $doctor->polyclinic->name }}</a></td>
+                                            <td class="text-center">
+                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn" style="background: #7286D3">Edit</a> <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger" type="submit">Delete</button>
                                                 </form>
                                             </td>
-
                                         </tr>
                                     @endforeach
                                 </tbody>

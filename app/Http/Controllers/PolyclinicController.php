@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Polyclinic;
-use App\Http\Requests\StorePolyclinicRequest;
-use App\Http\Requests\UpdatePolyclinicRequest;
 use Illuminate\Http\Request;
 
 class PolyclinicController extends Controller

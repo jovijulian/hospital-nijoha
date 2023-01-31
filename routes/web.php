@@ -3,6 +3,7 @@
 use App\Http\Controllers\PolyclinicController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PatientController;
+use App\Http\Controllers\HomeController;
 use App\Models\Polyclinic;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->name('dashboard');
+Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 Route::resource('polyclinic', PolyclinicController::class);
 Route::resource('doctor', DoctorController::class);
 Route::resource('patient', PatientController::class);

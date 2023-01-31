@@ -11,26 +11,27 @@
                             <div class="col-12">
                                 <h3 class="mb-0">Add Polyclinics</h3>
                             </div>
-                           
+
                         </div>
                     </div>
-        
+
                     <div class="card-body">
                         <form action="{{ route('polyclinic.store') }}" method="POST">
                             @csrf
-                        
+
                                 <div class="form-group mt-2">
-                                    <label for="name">Nama Polyclinic</label>
+                                    <label for="name"  style="font-weight: bold; color: #000">Nama Polyclinic</label>
                                     <input type="text" class="form-control" name="name">
                                 </div>
-                        
-                                <button type="submit" class="btn btn-primary mt-3">Simpan</button>
+                                <div class="float-right">
+                                <button type="submit" class="btn mt-3"  style="background: #E5E0FF; color: #000">Save</button>
+                                </div>
                             </form>
                     </div>
                 </div>
             </div>
         </div>
-      
+
     </div>
 </div>
 @endsection

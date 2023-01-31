@@ -15,13 +15,25 @@
                     </div>
 
                   <div class="card-body">
-                    <h6 class="mb-1 ml-2">Id: {{ $polyclinic->id }}</h6>
-                    <h6 class="mb-1 ml-2">Name: {{ $polyclinic->name }}</h6>
-                    <h6 class="ml-2">Created: {{ date('d-m-Y H:i:s', strtotime($polyclinic->created_at)) }}</h6>
+                    <table>
+                        <tr>
+                            <td>ID</td>
+                            <td>: {{ $polyclinic->id }}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>: {{ $polyclinic->name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Created</td>
+                            <td>: {{  date('d-m-Y H:i:s', strtotime($polyclinic->created_at)) }}</td>
+                        </tr>
 
-                        <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%"">
+                    </table>
+
+                        <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%">
                             <h5 class="text-center">Doctor</h5>
-                            <thead class="thead-dark">
+                            <thead class="thead-light">
                                 <tr>
                                     <th scope="col" class="text-center">No</th>
                                     <th scope="col">Registration Code</th>
@@ -32,7 +44,7 @@
                             @foreach ($polyclinic->doctor as $doctor)
                             <tr>
                                     <td class="text-center">{{ $loop->iteration }}</td>
-                                    <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Dokter" style="font-weight: bold">{{ $doctor->registration_code }}</a></td>
+                                    <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Lihat Data Dokter" style="font-weight: bold; color: #7286D3">{{ $doctor->registration_code }}</a></td>
                                     <td>{{ $doctor->name }}</td>
                             </tr>
                             @endforeach
@@ -41,7 +53,7 @@
                         <hr>
                         <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%"">
                             <h5 class="text-center">Patient</h5>
-                            <thead class="thead-dark">
+                            <thead class="thead-light">
                                 <tr>
                                         <th scope="col" class="text-center">No</th>
                                         <th scope="col">Registration Code</th>
@@ -53,7 +65,7 @@
                             @foreach ($polyclinic->patient as $patient)
                             <tr>
                                 <td class="text-center">{{ $loop->iteration }}</td>
-                                <td><a href="{{ route('patient.show', $patient->id) }}" title="Detail patient" style="font-weight: bold">{{ $patient->registration_code }}</a></td>
+                                <td><a href="{{ route('patient.show', $patient->id) }}" title="Detail patient" style="font-weight: bold; color: #7286D3">{{ $patient->registration_code }}</a></td>
                                 <td>{{ $patient->name }}</td>
                                 <td>{{ Carbon\Carbon::parse($patient->birthDate)->age . " y.o" }}</td>
                             </tr>

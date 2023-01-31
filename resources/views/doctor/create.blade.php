@@ -19,9 +19,9 @@
                         <form action="{{ route('doctor.store') }}" method="POST">
                             @csrf
                                 <div class="form-group mt-2">
-                                    <label for="name">Doctor Name</label>
+                                    <label for="name" style="font-weight: bold; color: #000">Doctor Name</label>
                                     <input type="text" class="form-control" name="name">
-                                    <label for="polyclinic_id">Polyclinic Name</label>
+                                    <label for="polyclinic_id" style="font-weight: bold; color: #000">Polyclinic Name</label>
                                     <select name="polyclinic_id" id="" class="form-control">
                                         <option value="" selected>Pilih Poli</option>
                                         @foreach ($polyclinics as $polyclinic)
@@ -29,7 +29,9 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3">Simpan</button>
+                                <div class="float-right">
+                                    <button type="submit" class="btn mt-3"  style="background: #E5E0FF; color: #000">Save</button>
+                                    </div>
                             </form>
                     </div>
                 </div>

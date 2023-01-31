@@ -15,15 +15,15 @@
                                     <h3 class="mb-0">Patients</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a href="{{ route('patient.create')}}" class="btn btn-md" style="background: #FBF2CF; color: #000; border-radius: 15px;
-                                    ">Add Patients</a>
+                                    <a href="{{ route('patient.create')}}" class="btn btn-md" style="background: #E5E0FF; color: #000; border-radius: 15px;
+                                    ">Add Patient</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-3">
                             <table class="table align-items-center table-striped" style="margin: 0 auto; width: 95%">
-                                <thead class="thead-dark">
+                                <thead class="thead-light">
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Registration Number</th>
@@ -38,13 +38,13 @@
                                     @foreach ($patients as $patient)
                                         <tr>
                                             <td class="text-center">{{ $loop->iteration }}</td>
-                                            <td><a href="{{ route('patient.show', $patient->id) }}" title="Patient Detail" style="font-weight: bold">{{ $patient->registration_code }}</a></td>
+                                            <td><a href="{{ route('patient.show', $patient->id) }}" title="Patient Detail" style="font-weight: bold; color: #7286D3">{{ $patient->registration_code }}</a></td>
                                             <td>{{ $patient->name }}</td>
                                             <td>{{ Carbon\Carbon::parse($patient->birthDate)->age . " y.o" }}</td>
-                                            <td> <a href="{{ route('doctor.show', $patient->doctor->id) }}" title="Doctor Detail" style="font-weight: bold">{{ $patient->doctor->name }}</a></td>
-                                            <td> <a href="{{ route('polyclinic.show', $patient->polyclinic->id) }}" title="Poly Detail" style="font-weight: bold">{{ $patient->polyclinic->name }}</a></td>
+                                            <td> <a href="{{ route('doctor.show', $patient->doctor->id) }}" title="Doctor Detail" style="font-weight: bold; color: #7286D3">{{ $patient->doctor->name }}</a></td>
+                                            <td> <a href="{{ route('polyclinic.show', $patient->polyclinic->id) }}" title="Poly Detail" style="font-weight: bold; color: #7286D3">{{ $patient->polyclinic->name }}</a></td>
                                             <td class="text-center">
-                                                <a href="{{ route('patient.edit', $patient->id) }}" class="btn" style="background: #61876E">Edit</a> <form action="{{ route('patient.destroy', $patient->id) }}" method="POST">
+                                                <a href="{{ route('patient.edit', $patient->id) }}" class="btn" style="background: #7286D3">Edit</a> <form action="{{ route('patient.destroy', $patient->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger" type="submit">Delete</button>
