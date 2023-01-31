@@ -26,12 +26,12 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">Registration Number</th>
+                                        <th scope="col">Registration Code</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Age</th>
                                         <th scope="col">Doctor Name</th>
-                                        <th scope="col">Poly Name</th>
-                                        <th  class="text-center">Action</th>
+                                        <th scope="col">Polyclinic Name</th>
+                                        <th colspan="2" class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,7 +44,10 @@
                                             <td> <a href="{{ route('doctor.show', $patient->doctor->id) }}" title="Doctor Detail" style="font-weight: bold; color: #7286D3">{{ $patient->doctor->name }}</a></td>
                                             <td> <a href="{{ route('polyclinic.show', $patient->polyclinic->id) }}" title="Poly Detail" style="font-weight: bold; color: #7286D3">{{ $patient->polyclinic->name }}</a></td>
                                             <td class="text-center">
-                                                <a href="{{ route('patient.edit', $patient->id) }}" class="btn" style="background: #7286D3">Edit</a> <form action="{{ route('patient.destroy', $patient->id) }}" method="POST">
+                                                <a href="{{ route('patient.edit', $patient->id) }}" class="btn" style="background: #7286D3">Edit</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <form action="{{ route('patient.destroy', $patient->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger" type="submit">Delete</button>

@@ -15,6 +15,7 @@
                     </div>
 
                   <div class="card-body">
+
                     <table>
                         <tr>
                             <td>Registration Number</td>
@@ -37,9 +38,7 @@
                             <td>: {{ $patient->polyclinic->name }}</td>
                         </tr>
                     </table>
-
                     </div>
-
                 </div>
             </div>
         </div>

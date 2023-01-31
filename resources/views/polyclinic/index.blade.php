@@ -24,7 +24,7 @@
                                 <tr>
                                     <th scope="col" class="text-center">No</th>
                                     <th scope="col">Name</th>
-                                    <th class="text-center">Action</th>
+                                    <th colspan="2" class="text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,7 +33,10 @@
                                 <td class="text-center">{{ $loop->iteration }}</td>
                                 <td> <a href="{{ route('polyclinic.show', $polyclinic->id) }}" title="Poly Detail" style="font-weight: bold; color: #7286D3">{{ $polyclinic->name }}</a></td>
                                 <td class="text-center">
-                                    <a href="{{ route('polyclinic.edit', $polyclinic->id) }}" class="btn" style="background: #7286D3;">Edit</a> <form action="{{ route('polyclinic.destroy', $polyclinic->id) }}" method="POST">
+                                    <a href="{{ route('polyclinic.edit', $polyclinic->id) }}" class="btn" style="background: #7286D3;">Edit</a>
+                                </td>
+                                <td class="text-center">
+                                    <form action="{{ route('polyclinic.destroy', $polyclinic->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger" type="submit">Delete</button>

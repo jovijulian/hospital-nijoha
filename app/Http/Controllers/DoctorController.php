@@ -79,7 +79,7 @@ class DoctorController extends Controller
     public function show($id)
     {
         $detail = Doctor::find($id);
-        return view('doctor.show', compact('doctor'));
+        return view('doctor.show', compact('detail'));
     }
 
     /**

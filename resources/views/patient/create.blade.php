@@ -34,7 +34,7 @@
                                 <div class="form-group mt-2">
                                     <label for="polyclinic_id" style="font-weight: bold; color: #000">Polyclinic Name</label>
                                     <select id="polyclinic_id" name="polyclinic_id" class="form-control selectpicker" data-live-search="true" style="font-weight: bold" required>
-                                        <option selected>Choose Poly</option>
+                                        <option selected>Choose Polyclinic</option>
                                         @foreach ($polyclinics as $polyclinic)
                                             <option value="{{ $polyclinic->id }}">{{ $polyclinic->name }}</option>
                                         @endforeach
@@ -47,7 +47,8 @@
                                     </select>
                                 </div>
                                 <div class="float-right">
-                                    <button type="submit" class="btn mt-3" style="background: #E5E0FF; color: #000">Save</button>
+                                    <a href="{{ route('patient.index') }}" class="btn btn-danger">Back</a>
+                                    <button type="submit" class="btn" style="background: #E5E0FF; color: #000">Save</button>
                                 </div>
 
                             </form>

@@ -11,4 +11,8 @@ class Doctor extends Model
     public function polyclinic(){
         return $this->belongsTo(Polyclinic::class, 'polyclinic_id', 'id');
     }
+    public function patient()
+    {
+        return $this->hasMany(Patient::class);
+    }
 }

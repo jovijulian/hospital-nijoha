@@ -49,7 +49,8 @@
                             </select>
                         </div>
                         <div class="float-right">
-                            <button type="submit" class="btn mt-3" style="background: #61876E">Simpan</button>
+                            <a href="{{ route('patient.index') }}" class="btn btn-danger">Back</a>
+                            <button type="submit" class="btn" style="background: #E5E0FF; color: #000">Save</button>
                         </div>
                         </form>
                     </div>

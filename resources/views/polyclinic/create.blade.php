@@ -9,7 +9,7 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-12">
-                                <h3 class="mb-0">Add Polyclinics</h3>
+                                <h3 class="mb-0">Add Polyclinic</h3>
                             </div>
 
                         </div>
@@ -20,11 +20,12 @@
                             @csrf
 
                                 <div class="form-group mt-2">
-                                    <label for="name"  style="font-weight: bold; color: #000">Nama Polyclinic</label>
+                                    <label for="name"  style="font-weight: bold; color: #000">Polyclinic Name</label>
                                     <input type="text" class="form-control" name="name">
                                 </div>
                                 <div class="float-right">
-                                <button type="submit" class="btn mt-3"  style="background: #E5E0FF; color: #000">Save</button>
+                                    <a href="{{ route('polyclinic.index') }}" class="btn btn-danger">Back</a>
+                                    <button type="submit" class="btn"  style="background: #E5E0FF; color: #000">Save</button>
                                 </div>
                             </form>
                     </div>

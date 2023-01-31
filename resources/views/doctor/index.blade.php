@@ -28,8 +28,8 @@
                                         <th scope="col" class="text-center">No</th>
                                         <th scope="col">Registration Code</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Poly Name</th>
-                                        <th>Action</th>
+                                        <th scope="col">Polyclinic Name</th>
+                                        <th colspan="2" class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,8 +39,12 @@
                                             <td> <a href="{{ route('doctor.show', $doctor->id) }}" title="Doctor Detail" style="font-weight: bold; color: #7286D3">{{ $doctor->registration_code }}</a></td>
                                             <td>{{ $doctor->name }}</td>
                                             <td> <a href="{{ route('polyclinic.show', $doctor->polyclinic->id) }}" title="Poly Detail" style="font-weight: bold; color: #7286D3">{{ $doctor->polyclinic->name }}</a></td>
+
                                             <td class="text-center">
-                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn" style="background: #7286D3">Edit</a> <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
+                                                <a href="{{ route('doctor.edit', $doctor->id) }}" class="btn" style="background: #7286D3">Edit</a>
+                                            </td>
+                                            <td class="text-center">
+                                                <form action="{{ route('doctor.destroy', $doctor->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="btn btn-danger" type="submit">Delete</button>

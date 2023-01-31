@@ -9,12 +9,12 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-12">
-                                <h3 class="mb-0">Edit Polyclinics</h3>
+                                <h3 class="mb-0">Edit Polyclinic</h3>
                             </div>
-                           
+
                         </div>
                     </div>
-        
+
                     <div class="card-body">
                         <form action="{{ route('polyclinic.update', $polyclinic->id) }}" method="POST">
                         @csrf
@@ -23,13 +23,16 @@
                                 <label for="name">Polyclinic Name</label>
                                 <input type="text" class="form-control" name="name" value="{{ $polyclinic->name }}">
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3">Save</button>
+                            <div class="float-right">
+                                <a href="{{ route('polyclinic.index') }}" class="btn btn-danger">Back</a>
+                                <button type="submit" class="btn" style="background: #E5E0FF; color: #000">Save</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-      
+
     </div>
 </div>
 @endsection
