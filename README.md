@@ -1,66 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Nijoha Hospital App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Dashboard](https://user-images.githubusercontent.com/53847981/216038618-b0d02916-9e17-48bf-bb8c-26170e0e1dd1.png)
 
-## About Laravel
+Nijoha Hospital App merupakan singkatan dari NIsa, JOvi, HAiran Hospital yang merupakan kontribusi dalam melakukan pengembangan proyek Aplikasi Rumah Sakit ini.
+Aplikasi ini merupakan Tugas Besar dari Mata Kuliah Praktek Pemrograman Website 2 dengan tema menggunakan Framework Laravel. Pada pengembangan aplikasi ini menggunakan Laravel 9 dengan Database MySQL. Menu yang terdapat di dalam aplikasi adalah
+- Polyclinics
+- Doctors
+- Patients
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Polyclinics
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Polyclinics](https://user-images.githubusercontent.com/53847981/216041115-cbf6e3b6-0f67-40d0-b8f2-e6b886d77b33.png)
 
-## Learning Laravel
+Pada menu ini berfungsi untuk mengelola data Poliklinik.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Polyclinic Detail
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Detail Polyclinics](https://user-images.githubusercontent.com/53847981/216041432-96a7ef25-fba8-47ee-ad43-5b683d4b5d95.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Pada detail poliklinik akan menampilkan data poliklinik dengan data dokter yang bertugas pada poliklinik itu dan data pasien yang di rawat pada poliklinik itu.
 
-## Laravel Sponsors
+## Create Polyclinic
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Create Polyclinic](https://user-images.githubusercontent.com/53847981/216049144-56d1d67d-536b-43f1-9342-0415799ad99c.png)
 
-### Premium Partners
+Berikut tampilan untuk menambahkan data Poliklinik.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Doctors
 
-## Contributing
+![Doctors](https://user-images.githubusercontent.com/53847981/216042786-3577b718-39d8-457f-ab7b-016b04bcb114.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pada menu ini berfungsi untuk mengelola data Dokter.
 
-## Code of Conduct
+![Regist Code Doctor](https://user-images.githubusercontent.com/53847981/216047691-b8ffa153-6b63-440b-a297-cd6d19d2968e.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Pada Registration Number di Dokter berisikan format seperti berikut D(Kode dokter) + Huruf Awal pada Nama dokter + tanggal ketika ditambahkannya data dokter + 001(increment). <br />
+Ketika di hari yang sama contoh (2023-01-30) akan menambahkan 3 data dokter maka 3 digit terakhir pada Registration Number akan berjumlah 003 pada data dokter yang terakhir ditambahkan. <br />
+Dan juga ketika sudah berganti contoh (2023-02-01) akan menambahkan 1 data dokter, maka 3 digit terakhir pada Registration Number akan melakukan reset, tidak melanjutkan pada data yang ditambahkan sebelumnya pada tanggal 2023-01-30. Data yang ditambahkan pada 2023-02-01 akan menjadi 001 kembali. <br />
 
-## Security Vulnerabilities
+## Doctor Detail
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Doctor Detail](https://user-images.githubusercontent.com/53847981/216044768-af3c410c-ef78-44aa-aaea-0077c1b24fde.png)
 
-## License
+Pada detail dokter akan menampilkan data dokter dengan data pasien yang di rawat oleh dokter tersebut.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Create Doctor
+
+![Create Doctor](https://user-images.githubusercontent.com/53847981/216045292-f9132c50-b4dd-47b8-9d54-3856b752d8c2.png)
+
+Berikut tampilan untuk menambahkan data Dokter. Pada menu ini dapat menambahkan dokter sesuai dengan Poli yang ia ditugaskan.
+
+## Patients
+
+![Patients](https://user-images.githubusercontent.com/53847981/216046787-0b8714ca-aa4f-4d4a-a43e-6f36c987291d.png)
+
+Pada menu ini berfungsi untuk mengelola data Pasien.
+
+![Regist Code Patient](https://user-images.githubusercontent.com/53847981/216047123-faafa300-cf6d-435c-ba6e-0d86ecf7c6a4.png)
+
+Pada Registration Number di Pasien berisikan format seperti berikut P(Kode pasien) + Huruf Awal pada Nama pasien + tanggal ketika ditambahkannya data pasien + 001(increment). <br />
+Ketika di hari yang sama contoh (2023-01-30) akan menambahkan 2 data pasien maka 3 digit terakhir pada Registration Number akan berjumlah 002 pada data pasien yang terakhir ditambahkan. <br />
+Dan juga ketika sudah berganti contoh (2023-01-31) akan menambahkan 1 data pasien, maka 3 digit terakhir pada Registration Number akan melakukan reset, tidak melanjutkan pada data yang ditambahkan sebelumnya pada tanggal 2023-01-30. Data yang ditambahkan pada 2023-01-31 akan menjadi 001 kembali. <br />
+
+## Patient Detail
+
+![Detail patient](https://user-images.githubusercontent.com/53847981/216047986-8b54900a-11ce-4f55-9b10-3b32c9df6725.png)
+
+Pada detail pasien akan menampilkan data pasien.
+
+## Create Patient
+
+![Create Patient](https://user-images.githubusercontent.com/53847981/216048478-afdb5ca9-f2b5-41ba-9948-0cbfbcbb1d8e.png)
+![Create Patient 2](https://user-images.githubusercontent.com/53847981/216048897-091aa721-b25c-4ecd-9914-635786d8ef83.png)
+
+Berikut tampilan untuk menambahkan data pasien. Pada menu ini dapat menambahkan pasien sesuai dengan poli yang ia dirawat dan mampu memfilter dokter apa saja yang bertugas pada poli tersebut seperti contoh pada gambar di atas.
+
+## Data Contributors
+- Hairan Kani Jatnika - 3IF-01 - 200914016
+- Jovi Julian Hendri - 3MI-01 - 200613007
+- Khoirunisa Mujahidah Salman - 3MI-02 - 200313017
+
+Dosen pengampu: <b>Rudy Sofian, M.Kom</b>
