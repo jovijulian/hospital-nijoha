@@ -36,7 +36,7 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col" class="text-center">No</th>
-                                    <th scope="col">Registration Code</th>
+                                    <th scope="col">Registration Number</th>
                                     <th scope="col">Name</th>
                                 </tr>
                             </thead>
@@ -56,7 +56,7 @@
                             <thead class="thead-light">
                                 <tr>
                                         <th scope="col" class="text-center">No</th>
-                                        <th scope="col">Registration Code</th>
+                                        <th scope="col">Registration Number</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Age</th>
                                 </tr>

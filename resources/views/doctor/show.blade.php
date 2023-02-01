@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <table>
                             <tr>
-                                <td>Registration Code</td>
+                                <td>Registration Number</td>
                                 <td>: {{ $detail->registration_code }}</td>
                             </tr>
                             <tr>
@@ -40,7 +40,7 @@
                             <thead class="thead-light">
                                 <tr>
                                         <th scope="col" class="text-center">No</th>
-                                        <th scope="col">Registration Code</th>
+                                        <th scope="col">Registration Number</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Age</th>
                                 </tr>
