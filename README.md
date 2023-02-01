@@ -2,7 +2,7 @@
 
 ![Dashboard](https://user-images.githubusercontent.com/53847981/216038618-b0d02916-9e17-48bf-bb8c-26170e0e1dd1.png)
 
-Nijoha Hospital App merupakan singkatan dari NIsa, JOvi, HAiran Hospital yang merupakan kontribusi dalam melakukan pengembangan proyek Aplikasi Rumah Sakit ini.
+Nijoha Hospital App merupakan singkatan dari NIsa, JOvi, HAiran Hospital yang merupakan kontributor dalam melakukan pengembangan proyek Aplikasi Rumah Sakit ini.
 Aplikasi ini merupakan Tugas Besar dari Mata Kuliah Praktek Pemrograman Website 2 dengan tema menggunakan Framework Laravel. Pada pengembangan aplikasi ini menggunakan Laravel 9 dengan Database MySQL. Menu yang terdapat di dalam aplikasi adalah
 - Polyclinics
 - Doctors
