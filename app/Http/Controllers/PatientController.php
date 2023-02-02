@@ -65,7 +65,7 @@ class PatientController extends Controller
                 foreach ($getName as $f) {
                     $getFirstCharacter .= mb_substr($f, 0, 1);
                 }
-                $code = DB::table('patients')->whereDate('created_at', $date2)->max(DB::raw('substr(registration_code, -1)'));
+                $code = DB::table('patients')->whereDate('created_at', $date2)->max(DB::raw('substr(registration_code, -3)'));
                 $addNol = '';
                 $nextcode1 = substr($code, -3);
                 $nextcode1++;
